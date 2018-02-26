@@ -2,6 +2,11 @@
 
 Tinkering with Hover's API to add &amp; change DNS entries
 
+## Create hover.cfg file
+
+username="myuser"
+password="mypass"
+
 ## Create test record
 
 dyn.sotong.io
