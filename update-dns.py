@@ -8,7 +8,7 @@ execfile("hover.cfg")
 url = "https://www.hover.com/api/login"
 
 # Generate random string
-len=16
+len=255
 rand=""
 
 for _ in range(len):
