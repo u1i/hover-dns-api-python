@@ -1,0 +1,245 @@
+{
+	"info": {
+		"name": "hover",
+		"_postman_id": "aa012c6a-366e-903d-8824-92f86c5c9f90",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "__USERNAME__",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "__PASSWORD__",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://www.hover.com/api/login",
+					"protocol": "https",
+					"host": [
+						"www",
+						"hover",
+						"com"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get domain",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "hoverauth=__COOKIE__"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://www.hover.com/api/domains/dom1946818",
+					"protocol": "https",
+					"host": [
+						"www",
+						"hover",
+						"com"
+					],
+					"path": [
+						"api",
+						"domains",
+						"dom1946818"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get dns entries",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "hoverauth=__COOKIE__"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://www.hover.com/api/dns",
+					"protocol": "https",
+					"host": [
+						"www",
+						"hover",
+						"com"
+					],
+					"path": [
+						"api",
+						"dns"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get dns for domain",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "hoverauth=__COOKIE__"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://www.hover.com/api/domains/sotong.io/dns",
+					"protocol": "https",
+					"host": [
+						"www",
+						"hover",
+						"com"
+					],
+					"path": [
+						"api",
+						"domains",
+						"sotong.io",
+						"dns"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get dns for domain (alternative)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "hoverauth=__COOKIE__"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://www.hover.com/api/domains/dom1946818/dns",
+					"protocol": "https",
+					"host": [
+						"www",
+						"hover",
+						"com"
+					],
+					"path": [
+						"api",
+						"domains",
+						"dom1946818",
+						"dns"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create DNS entry",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "hoverauth=__COOKIE__"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"mysub123\", \"type\": \"TXT\", \"content\": \"blaaaaa\"}"
+				},
+				"url": {
+					"raw": "https://www.hover.com/api/domains/dom1946818/dns",
+					"protocol": "https",
+					"host": [
+						"www",
+						"hover",
+						"com"
+					],
+					"path": [
+						"api",
+						"domains",
+						"dom1946818",
+						"dns"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update DNS record",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "hoverauth=__COOKIE__"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"content\": \"bla\"}"
+				},
+				"url": {
+					"raw": "https://www.hover.com/api/dns/dns16451432",
+					"protocol": "https",
+					"host": [
+						"www",
+						"hover",
+						"com"
+					],
+					"path": [
+						"api",
+						"dns",
+						"dns16451432"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

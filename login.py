@@ -12,5 +12,8 @@ headers = {
 
 response = requests.request("POST", url, data=payload, headers=headers)
 
-print(response.text)
-print(response.cookies)
+if not response.ok or "hoverauth" not in response.cookies:
+	print "Login failed"
+else:
+	print(response.text)
+	print(response.cookies)
